@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josh Millward | Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #f4f4f9;
+            --text-color: #333;
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --card-bg: #fff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s;
+        }
+
+        .social-links a:hover {
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .project-card a {
+            display: inline-block;
+            margin-top: auto;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: var(--primary-color);
+            color: #fff;
+            margin-top: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Josh Millward</h1>
+        <p>Software Engineering Student @ Utah Valley University</p>
+        <div class="social-links">
+            <a href="https://github.com/joshuamillward03" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/joshua-millward-9b5294369" target="_blank">LinkedIn</a>
+            <a href="mailto:JoshuaMillward03@gmail.com">Email</a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a software engineering student with a 4.0 GPA. I enjoy building applications and especially love creating algorithms. I learn quickly and love the critical thinking challenges that programming presents. When I'm not coding, I coach wrestling as an assistant coach at my local high school, and spend my free time building a dungeon crawler game in the Godot engine.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">C</span>
+                <span class="skill-tag">ARM Assembly</span>
+                <span class="skill-tag">GDScript</span>
+                <span class="skill-tag">R</span>
+                <span class="skill-tag">Git / GitHub Flow</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Pygame</span>
+                <span class="skill-tag">Godot</span>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <h3>ARM Graphics Suite</h3>
+                    <p>Developed an ARMv7 assembly graphics suite on CPULator. Includes cellular automata simulations (Conway's Game of Life, WireWorld, Langton's Ant) and 3D wireframe projections rendered via VGA pixel buffers.</p>
+                    <a href="https://github.com/JoshuaMillward03/vga_graphics" target="_blank">View on GitHub &rarr;</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Blackjack Simulator</h3>
+                    <p>A functional Blackjack card game simulator built in Python utilizing the Pygame library, featuring complete game logic and object-oriented class structures.</p>
+                    <a href="https://github.com/JoshuaMillward03/blackjack" target="_blank">View on GitHub &rarr;</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>C++ Particle Fluid Simulator</h3>
+                    <p>A real-time 2D particle fluid simulation built in C++ using the Raylib library. Features a custom physics solver inspired by Smoothed Particle Hydrodynamics (SPH) that calculates density-based pressure, velocity-based viscosity, and dynamic boundary collisions.</p>
+                    <a href="https://github.com/JoshuaMillward03/FluidDynamics" target="_blank">View on GitHub &rarr;</a>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Josh Millward. Built with HTML & CSS.</p>
+    </footer>
+
+</body>
+</html>
